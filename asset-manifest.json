@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/IngaPirogova/mp/static/css/main.7acaea2f.css",
-    "main.js": "/IngaPirogova/mp/static/js/main.07d3183d.js",
+    "main.js": "/IngaPirogova/mp/static/js/main.c52c3b16.js",
     "index.html": "/IngaPirogova/mp/index.html",
     "main.7acaea2f.css.map": "/IngaPirogova/mp/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/IngaPirogova/mp/static/js/main.07d3183d.js.map"
+    "main.c52c3b16.js.map": "/IngaPirogova/mp/static/js/main.c52c3b16.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.c52c3b16.js"
   ]
 }
