@@ -18,25 +18,7 @@ export const App = () => {
   )
 }
 
-// export const App = () => {
-//   return (
-//        <Suspense fallback={<div>Loading...</div>}>
-//       <Routes>
-//         <Route path="/" element={<Layout />}>
-//           <Route index element={<MainPage />} />
-//           <Route path="register" element={<RegisterPage />} />
-//           <Route path="login" element={<LoginPage />} />
-//           <Route path="calendar" element={<MainLayout />}>
-//             <Route path="account" element={<AccountPage />} />
-//             <Route index element={<CalendarPage />} />
-//           </Route>
-//           <Route path="*" element={<NotFoundPagePage />} />
-//         </Route>
-//       </Routes>
-//       <ToastContainer autoClose={3000} />
-//       </Suspense>
-//   );
-// };
+
 
 
 
