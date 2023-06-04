@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IngaPirogova/mp/static/css/main.7cdf6e12.css",
-    "main.js": "/IngaPirogova/mp/static/js/main.9b440347.js",
+    "main.js": "/IngaPirogova/mp/static/js/main.f5ffcc94.js",
     "static/media/calendartablet2x.png": "/IngaPirogova/mp/static/media/calendartablet2x.d3256e0dd4cb10e9e3dd.png",
     "static/media/calendardesk2x.png": "/IngaPirogova/mp/static/media/calendardesk2x.566a8f1797e5ecfb249b.png",
     "static/media/sidebartablet2x.png": "/IngaPirogova/mp/static/media/sidebartablet2x.34b9c25eaba4dfcc3f3c.png",
@@ -32,10 +32,10 @@
     "index.html": "/IngaPirogova/mp/index.html",
     "static/media/login.svg": "/IngaPirogova/mp/static/media/login.600b2cc3eddb0d59e7f42ddf85a5f515.svg",
     "main.7cdf6e12.css.map": "/IngaPirogova/mp/static/css/main.7cdf6e12.css.map",
-    "main.9b440347.js.map": "/IngaPirogova/mp/static/js/main.9b440347.js.map"
+    "main.f5ffcc94.js.map": "/IngaPirogova/mp/static/js/main.f5ffcc94.js.map"
   },
   "entrypoints": [
     "static/css/main.7cdf6e12.css",
-    "static/js/main.9b440347.js"
+    "static/js/main.f5ffcc94.js"
   ]
 }
