@@ -284,6 +284,7 @@ export const StyledPictureDescr = styled.picture`
 
  //Slider
 
+ 
  export const SliderTitle = styled.h3`
   margin: 0;
   margin-bottom: 40px;
@@ -322,4 +323,58 @@ display: flex;
   margin-bottom: 8px;
   list-style: none;   
 `
-export const SliderItem = styled.li``
+export const SliderItem = styled.li`
+  box-sizing: border-box;
+  padding: 24px;
+  max-width: 335px;
+  height: 194px;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 8px;
+
+  overflow: hidden;
+  `
+
+
+export const SliderHeaderUser = styled.div`
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;  
+`;
+
+export const SliderUserPhoto = styled.img`
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
+export const HeaderUserWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SliderUserTitle = styled.h4`
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  
+`;
+
+export const SliderUserRating = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+
+export const SliderUserDescr = styled.p`
+  margin: 0;
+  padding: 0;
+  
+  
+  color: rgba(17, 17, 17, 0.7);
+
+  @media (min-width: 768px) {
+    margin-left: 68px;
+  }
+`;

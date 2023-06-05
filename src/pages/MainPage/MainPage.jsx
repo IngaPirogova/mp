@@ -50,9 +50,19 @@ import {  StyledText,
   StyledImgAuthNav,
   AuthBtnWrapper,
   WrapItemText,
+  SliderHeaderUser,
+  SliderUserPhoto,
+  HeaderUserWrapper,
+  SliderUserTitle,
+  SliderUserRating,
+  SliderUserDescr, 
 } from './MainPage.styled';
 
-import login from '../../imagesMainPage/svg/login.svg'
+import login from '../../imagesMainPage/svg/login.svg';
+import Olena from '../../imagesMainPage/img/mobile/Olena1x.png';
+import Olex from '../../imagesMainPage/img/desktop/Olexdesk1x.png';
+import { ReactComponent as Star } from '../../imagesMainPage/svg/star.svg';
+
 
 
  const MainPage = () => {
@@ -170,17 +180,54 @@ import login from '../../imagesMainPage/svg/login.svg'
 <StyledSlider>
 <SliderTitle>Reviews</SliderTitle>
 <SliderList>
+<SliderItem>
+            <SliderHeaderUser>
+              <SliderUserPhoto src={Olena} alt="Olena Doe"></SliderUserPhoto>
+              <HeaderUserWrapper>
+                <SliderUserTitle>Olena Doe</SliderUserTitle>
+                <SliderUserRating>
+                  <Star width={14} height={14} fill="#CEC9C1" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                </SliderUserRating>
+              </HeaderUserWrapper>
+            </SliderHeaderUser>
+            <SliderUserDescr>
+              GooseTrack is impressive, the calendar view and filter options
+              make it easy to stay organized and focused. Highly recommended.
+            </SliderUserDescr>
+          </SliderItem>
 
+          <SliderItem>
+            <SliderHeaderUser>
+              <SliderUserPhoto src={Olex} alt="Alexander Hubbard "></SliderUserPhoto>
+              <HeaderUserWrapper>
+                <SliderUserTitle>Alexander Hubbard </SliderUserTitle>
+                <SliderUserRating>
+                  <Star width={14} height={14} fill="#CEC9C1" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                  <Star width={14} height={14} fill="#FFAC33" />
+                </SliderUserRating>
+              </HeaderUserWrapper>
+            </SliderHeaderUser>
+            <SliderUserDescr>
+              GooseTrack is impressive, the calendar view and filter options
+              make it easy to stay organized and focused. Highly recommended.
+            </SliderUserDescr>
+          </SliderItem>
 </SliderList>
 <SliderItem>
 
-</SliderItem>
 
-<SliderItem>
 
 </SliderItem>
 
 </StyledSlider>
+
 
 
 </Wrapper>
