@@ -162,9 +162,19 @@ ${({ additionalClass }) =>
 `
 
 export const WrapItemText = styled.div`
+
+@media screen and (min-width: 768px) {
+  ${({ additionalClass }) =>
+    additionalClass &&
+    `
+    margin-left: 430px;      
+    `}
+}
  
 @media screen and (min-width: 1440px) {
 flex-direction: column;
+margin-left: 0px; 
+
 }
 `
 
@@ -225,7 +235,7 @@ color: #171820;
 font-size: 40px;
 line-height: 1.1;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   ${({ additionalClass }) =>
     additionalClass &&
     `

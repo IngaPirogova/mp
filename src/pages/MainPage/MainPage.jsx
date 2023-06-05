@@ -90,7 +90,7 @@ import login from '../../imagesMainPage/svg/login.svg'
   <StyledItem>
     <WrapItemText>
     <StyledNumberTitle>1.</StyledNumberTitle>
-    <StyledBtnDescr type="button">Calendar </StyledBtnDescr>
+    <StyledBtnDescr>Calendar </StyledBtnDescr>
     <StyledSubtitle>view</StyledSubtitle>
     <StyledText>GooseTrack's Calendar view provides a comprehensive overview of your schedule, displaying all your tasks, events, and appointments in a visually appealing and intuitive layout.</StyledText>
     </WrapItemText>
@@ -114,7 +114,7 @@ import login from '../../imagesMainPage/svg/login.svg'
   </StyledItem>
 
   <StyledItem additionalClass={true}>
-  <WrapItemText>
+  <WrapItemText additionalClass={true}>
     <StyledNumberTitle>2.</StyledNumberTitle>
     <StyledSubtitle additionalClass={true}>sidebar</StyledSubtitle>
     <StyledText>GooseTrack offers easy access to your account settings, calendar, and filters. The "My Account" section allows you to manage your profile information and preferences, while the calendar provides a quick and convenient way to view your upcoming events and tasks.</StyledText>
@@ -141,7 +141,7 @@ import login from '../../imagesMainPage/svg/login.svg'
   <StyledItem>
   <WrapItemText>
     <StyledNumberTitle>3.</StyledNumberTitle>
-    <StyledBtnDescr type="button">all in</StyledBtnDescr>
+    <StyledBtnDescr>all in</StyledBtnDescr>
     <StyledSubtitle>one</StyledSubtitle>
     <StyledText>GooseTrack is an all-in-one productivity tool that helps you stay on top of your tasks, events, and deadlines. Say goodbye to scattered to-do lists and hello to streamlined productivity with GooseTrack.</StyledText>
     </WrapItemText>
