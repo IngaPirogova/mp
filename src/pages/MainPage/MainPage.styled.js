@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+// import { ReactComponent as LeftArrow } from '../../imagesMainPage/svg/leftarrow.svg';
+// import { ReactComponent as RightArrow } from '../../imagesMainPage/svg/rightarrow.svg';
 
 
 export const Wrapper = styled.div`
@@ -315,26 +317,34 @@ export const StyledSlider = styled.section`
    `
 
 export const SliderList = styled.ul`
-display: flex;
+  display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0;
   margin: 0;
   margin-bottom: 8px;
   list-style: none;   
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    gap: 124px;
+    margin-bottom: 32px;
+  }
 `
 export const SliderItem = styled.li`
   box-sizing: border-box;
   padding: 24px;
   max-width: 335px;
   height: 194px;
-
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
-
   overflow: hidden;
-  `
 
+  @media (min-width: 768px) {
+    max-width: 580px;
+    height: 187px;
+  }
+  `
 
 export const SliderHeaderUser = styled.div`
   display: flex;
@@ -355,9 +365,17 @@ export const HeaderUserWrapper = styled.div`
 `;
 
 export const SliderUserTitle = styled.h4`
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 1;
+color: #343434;
   margin: 0;
   margin-bottom: 13px;
   padding: 0;
+ 
   
 `;
 
@@ -370,11 +388,39 @@ export const SliderUserRating = styled.div`
 export const SliderUserDescr = styled.p`
   margin: 0;
   padding: 0;
-  
-  
-  color: rgba(17, 17, 17, 0.7);
+  width: 287px;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.29;
+color: rgba(17, 17, 17, 0.7);
 
-  @media (min-width: 768px) {
-    margin-left: 68px;
+@media (min-width: 768px) {
+  width: 447px;
   }
 `;
+
+
+export const SliderArWrap = styled.div`
+ display: flex;
+  gap: 25px;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+  
+  }
+`
+  
+
+// export const SliderLeft = styled(LeftArrow)`
+//   width: 6px;
+// height:47px;
+// background: #111111;
+//   `
+
+// export const SliderRight = styled(RightArrow)`
+// width: 6px;
+// height:47px;
+// background: #111111;
+// `

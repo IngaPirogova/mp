@@ -55,16 +55,17 @@ import {  StyledText,
   HeaderUserWrapper,
   SliderUserTitle,
   SliderUserRating,
-  SliderUserDescr, 
+  SliderUserDescr,  
+  SliderArWrap, 
 } from './MainPage.styled';
 
 import login from '../../imagesMainPage/svg/login.svg';
-import Olena from '../../imagesMainPage/img/mobile/Olena1x.png';
-import Olex from '../../imagesMainPage/img/desktop/Olexdesk1x.png';
+import Olena from '../../imagesMainPage/img/mobile/Olena2x.png';
+import Olex from '../../imagesMainPage/img/desktop/Olexdesk2x.png';
 import { ReactComponent as Star } from '../../imagesMainPage/svg/star.svg';
 
-
-
+import { ReactComponent as LeftArrow } from '../../imagesMainPage/svg/leftarrow.svg';
+import { ReactComponent as RightArrow } from '../../imagesMainPage/svg/rightarrow.svg';
  const MainPage = () => {
     return (     
     <>
@@ -220,15 +221,14 @@ import { ReactComponent as Star } from '../../imagesMainPage/svg/star.svg';
             </SliderUserDescr>
           </SliderItem>
 </SliderList>
-<SliderItem>
 
-
-
-</SliderItem>
+<SliderArWrap>
+                  
+<LeftArrow width={47} height={6}  />
+<RightArrow width={47} height={6}  />
+  </SliderArWrap>
 
 </StyledSlider>
-
-
 
 </Wrapper>
 </>
