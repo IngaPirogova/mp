@@ -37,6 +37,7 @@ export const SliderList = styled.ul`
   margin: 0;
   margin-bottom: 8px;
   list-style: none;   
+   overflow-x: scroll; 
 
   @media (min-width: 1440px) {
     flex-direction: row;
@@ -44,6 +45,7 @@ export const SliderList = styled.ul`
     margin-bottom: 32px;
   }
 `
+
 export const SliderItem = styled.li`
   box-sizing: border-box;
   padding: 24px;
@@ -53,11 +55,17 @@ export const SliderItem = styled.li`
   border-radius: 8px;
   overflow: hidden;
 
+  flex: 0 0 100%;
+
   @media (min-width: 768px) {
     max-width: 580px;
     height: 187px;
   }
   `
+
+
+
+
 
 export const SliderHeaderUser = styled.div`
   display: flex;
@@ -123,6 +131,24 @@ export const SliderArWrap = styled.div`
   @media (min-width: 768px) {
   
   }
-`
+`;
   
+
+// export const SliderArrows = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// `;
+
+// export const ArrowButton = styled.button`
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+// `;
+
+ 
+
+
+
+
 

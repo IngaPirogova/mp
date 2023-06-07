@@ -1,4 +1,84 @@
 
+// import {  
+//   SliderTitle, 
+//   StyledSlider,
+//   SliderList,
+//   SliderItem,
+//     SliderHeaderUser,
+//   SliderUserPhoto,
+//   HeaderUserWrapper,
+//   SliderUserTitle,
+//   //SliderUserRating,
+//   SliderUserDescr,  
+//   SliderArWrap, 
+//  // SliderArrows,
+//  // ArrowButton
+  
+// } from './Slider.styled';
+
+
+// import Olena from '../../../imagesMainPage/img/mobile/Olena2x.png';
+// import Olex from '../../../imagesMainPage/img/desktop/Olexdesk2x.png';
+// //import { ReactComponent as Star } from '../../../imagesMainPage/svg/star.svg';
+
+// import { ReactComponent as LeftArrow } from '../../../imagesMainPage/svg/leftarrow.svg';
+// import { ReactComponent as RightArrow } from '../../../imagesMainPage/svg/rightarrow.svg';
+
+
+
+// const Slider = () => {
+//     return (
+//         <StyledSlider>
+// <SliderTitle>Reviews</SliderTitle>
+// <SliderList>
+// <SliderItem>
+//             <SliderHeaderUser>
+//               <SliderUserPhoto src={Olena} alt="Olena Doe"></SliderUserPhoto>
+//               <HeaderUserWrapper>
+//                 <SliderUserTitle>Olena Doe</SliderUserTitle>
+               
+//               </HeaderUserWrapper>
+//             </SliderHeaderUser>
+//             <SliderUserDescr>
+//               GooseTrack is impressive, the calendar view and filter options
+//               make it easy to stay organized and focused. Highly recommended.
+//             </SliderUserDescr>
+//           </SliderItem>
+
+//           <SliderItem>
+//             <SliderHeaderUser>
+//               <SliderUserPhoto src={Olex} alt="Alexander Hubbard "></SliderUserPhoto>
+//               <HeaderUserWrapper>
+//                 <SliderUserTitle>Alexander Hubbard </SliderUserTitle>
+                
+//               </HeaderUserWrapper>
+//             </SliderHeaderUser>
+//             <SliderUserDescr>
+//               GooseTrack is impressive, the calendar view and filter options
+//               make it easy to stay organized and focused. Highly recommended.
+//             </SliderUserDescr>
+//           </SliderItem>
+// </SliderList>
+
+// <SliderArWrap>
+                  
+// <LeftArrow width={47} height={6}  />
+// <RightArrow width={47} height={6}  />
+//   </SliderArWrap>
+
+// </StyledSlider>
+
+//     )
+// }
+
+// export default Slider;
+
+
+
+import React, { useState } from 'react';
+//import styled from 'styled-components';
+
+
 import {  
   SliderTitle, 
   StyledSlider,
@@ -8,76 +88,71 @@ import {
   SliderUserPhoto,
   HeaderUserWrapper,
   SliderUserTitle,
-  SliderUserRating,
+  //SliderUserRating,
   SliderUserDescr,  
   SliderArWrap, 
+ // SliderArrows,
+ // ArrowButton
+  
 } from './Slider.styled';
-
-
-import Olena from '../../../imagesMainPage/img/mobile/Olena2x.png';
-import Olex from '../../../imagesMainPage/img/desktop/Olexdesk2x.png';
-import { ReactComponent as Star } from '../../../imagesMainPage/svg/star.svg';
 
 import { ReactComponent as LeftArrow } from '../../../imagesMainPage/svg/leftarrow.svg';
 import { ReactComponent as RightArrow } from '../../../imagesMainPage/svg/rightarrow.svg';
 
+import Olena from '../../../imagesMainPage/img/mobile/Olena2x.png';
+import Olex from '../../../imagesMainPage/img/desktop/Olexdesk2x.png';
 
+
+const reviews = [
+  {
+    name: 'Olena Doe',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Alexander Hubbard',
+    photo: Olex,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+];
 
 const Slider = () => {
-    return (
-        <StyledSlider>
-<SliderTitle>Reviews</SliderTitle>
-<SliderList>
-<SliderItem>
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? reviews.length - 1 : prevSlide - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === reviews.length - 1 ? 0 : prevSlide + 1));
+  };
+
+  return (
+    <StyledSlider>
+      <SliderTitle>Reviews</SliderTitle>
+      <SliderList>
+        {reviews.map((review, index) => (
+          <SliderItem key={index} style={{ transform: `translateX(${(index - currentSlide) * 100}%)` }}>
             <SliderHeaderUser>
-              <SliderUserPhoto src={Olena} alt="Olena Doe"></SliderUserPhoto>
+              <SliderUserPhoto src={review.photo} alt={review.name} />
               <HeaderUserWrapper>
-                <SliderUserTitle>Olena Doe</SliderUserTitle>
-                <SliderUserRating>
-                  <Star width={14} height={14} fill="#CEC9C1" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                </SliderUserRating>
+                <SliderUserTitle>{review.name}</SliderUserTitle>
               </HeaderUserWrapper>
             </SliderHeaderUser>
-            <SliderUserDescr>
-              GooseTrack is impressive, the calendar view and filter options
-              make it easy to stay organized and focused. Highly recommended.
-            </SliderUserDescr>
+            <SliderUserDescr>{review.description}</SliderUserDescr>
           </SliderItem>
-
-          <SliderItem>
-            <SliderHeaderUser>
-              <SliderUserPhoto src={Olex} alt="Alexander Hubbard "></SliderUserPhoto>
-              <HeaderUserWrapper>
-                <SliderUserTitle>Alexander Hubbard </SliderUserTitle>
-                <SliderUserRating>
-                  <Star width={14} height={14} fill="#CEC9C1" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                  <Star width={14} height={14} fill="#FFAC33" />
-                </SliderUserRating>
-              </HeaderUserWrapper>
-            </SliderHeaderUser>
-            <SliderUserDescr>
-              GooseTrack is impressive, the calendar view and filter options
-              make it easy to stay organized and focused. Highly recommended.
-            </SliderUserDescr>
-          </SliderItem>
-</SliderList>
-
-<SliderArWrap>
-                  
-<LeftArrow width={47} height={6}  />
-<RightArrow width={47} height={6}  />
-  </SliderArWrap>
-
-</StyledSlider>
-
-    )
-}
+        ))}
+      </SliderList>
+      <SliderArWrap>
+        <LeftArrow width={47} height={6} onClick={handlePrevSlide} />
+        <RightArrow width={47} height={6} onClick={handleNextSlide} />
+      </SliderArWrap>
+    </StyledSlider>
+  );
+};
 
 export default Slider;
+
+
+
+
