@@ -30,13 +30,13 @@ export const StyledSlider = styled.section`
 
 export const SliderList = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   padding: 0;
   margin: 0;
   margin-bottom: 8px;
   list-style: none;
-  overflow-x: scroll;
+  overflow-x: hidden;
 
   @media (min-width: 1440px) {
     flex-direction: row;
@@ -53,6 +53,7 @@ export const SliderItem = styled.li`
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  width: 100%;
 
   flex: 0 0 100%;
 

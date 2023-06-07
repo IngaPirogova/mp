@@ -1,3 +1,4 @@
+import { Wrapper } from "components/Landing/AuthLanding/AuthLanding.styled";
 import AuthLanding from "../../components/Landing/AuthLanding/AuthLanding";
 import Description from "../../components/Landing/Description/Description";
 import Slider from "../../components/Landing/Slider/Slider";
@@ -6,8 +7,10 @@ const MainPage = () => {
 return (
  <>
  <AuthLanding />
+ <Wrapper>
  <Description />
  <Slider /> 
+ </Wrapper>
  </>
 
   )
