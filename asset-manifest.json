@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mp/static/css/main.95ef4611.css",
-    "main.js": "/mp/static/js/main.8b5a7e27.js",
+    "main.css": "/mp/static/css/main.44563d43.css",
+    "main.js": "/mp/static/js/main.e1124577.js",
     "static/media/calendartablet2x.png": "/mp/static/media/calendartablet2x.d3256e0dd4cb10e9e3dd.png",
     "static/media/calendardesk2x.png": "/mp/static/media/calendardesk2x.566a8f1797e5ecfb249b.png",
     "static/media/sidebartablet2x.png": "/mp/static/media/sidebartablet2x.34b9c25eaba4dfcc3f3c.png",
@@ -32,15 +32,14 @@
     "static/media/goosedesk1x.png": "/mp/static/media/goosedesk1x.136512524c6ce06f26b4.png",
     "static/media/goosetablet1x.png": "/mp/static/media/goosetablet1x.136512524c6ce06f26b4.png",
     "index.html": "/mp/index.html",
-    "static/media/star.svg": "/mp/static/media/star.7616458ed3b550bc45f69de114fa7183.svg",
     "static/media/login.svg": "/mp/static/media/login.600b2cc3eddb0d59e7f42ddf85a5f515.svg",
     "static/media/leftarrow.svg": "/mp/static/media/leftarrow.94ae98565a2d8f54ce91f97786f109a1.svg",
     "static/media/rightarrow.svg": "/mp/static/media/rightarrow.d3de0518c79cf811d5466214cf7eef79.svg",
-    "main.95ef4611.css.map": "/mp/static/css/main.95ef4611.css.map",
-    "main.8b5a7e27.js.map": "/mp/static/js/main.8b5a7e27.js.map"
+    "main.44563d43.css.map": "/mp/static/css/main.44563d43.css.map",
+    "main.e1124577.js.map": "/mp/static/js/main.e1124577.js.map"
   },
   "entrypoints": [
-    "static/css/main.95ef4611.css",
-    "static/js/main.8b5a7e27.js"
+    "static/css/main.44563d43.css",
+    "static/js/main.e1124577.js"
   ]
 }
