@@ -103,14 +103,30 @@ import Olena from '../../../imagesMainPage/img/mobile/Olena2x.png';
 import Olex from '../../../imagesMainPage/img/desktop/Olexdesk2x.png';
 
 
+
 const reviews = [
   {
-    name: 'Olena Doe',
+    name: 'Olena Doe 11',
     photo: Olena,
     description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
   {
     name: 'Alexander Hubbard',
+    photo: Olex,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Olena Doe 22',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Olena Doe 33',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Alexander Hubbard 22',
     photo: Olex,
     description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
