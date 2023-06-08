@@ -30,7 +30,7 @@ import {  StyledText,
   StyledImg, 
   StyledPictureDescr,
   WrapItemText,
-  
+    
 } from './Description.styled';
 
 
@@ -65,13 +65,13 @@ const Description = () => {
         </StyledPictureDescr>  
   </StyledItem>
 
-  <StyledItem additionalClass={true}>
-  <WrapItemText additionalClass={true}>
+  <StyledItem className="sidebarItem">
+  <WrapItemText className="sidebarWrapText" >
     <StyledNumberTitle>2.</StyledNumberTitle>
-    <StyledSubtitle additionalClass={true}>sidebar</StyledSubtitle>
+    <StyledSubtitle className='sidebarSub'>sidebar</StyledSubtitle>
     <StyledText>GooseTrack offers easy access to your account settings, calendar, and filters. The "My Account" section allows you to manage your profile information and preferences, while the calendar provides a quick and convenient way to view your upcoming events and tasks.</StyledText>
     </WrapItemText>
-    <StyledPictureDescr>
+    <StyledPictureDescr className="sidebarImg">
         <source
           media="(min-width: 375px)"
           srcSet={`${sidebar1x} 1x, ${sidebar2x} 2x`}
@@ -85,7 +85,7 @@ const Description = () => {
           srcSet={`${sidebardesk1x} 1x, ${sidebardesk2x} 2x`}
         />     
        <StyledImg>
-       <img src={sidebar2x} alt="Sidebar" />
+       <img src={sidebar2x} alt="Sidebar"  />
        </StyledImg>
         </StyledPictureDescr>  
  

@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 export const StyledImg = styled.div`
     display: flex;
    flex-direction: column;
+
+   
    `
   
 export const StyledList = styled.ul`
@@ -16,11 +18,10 @@ margin-bottom: 64px;
 
 
 @media screen and (min-width: 768px) {
-  ${({ additionalClass }) =>
-    additionalClass &&
-    `
-    flex-direction: row-reverse;      
-    `}
+  display: flex;
+flex-direction: column;
+
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -28,24 +29,28 @@ display: flex;
 gap: 228px;
 justify-content: center;
 align-items: center;
+flex-direction: row;
 
-${({ additionalClass }) =>
-    additionalClass &&
-    `
-    flex-direction: row-reverse;      
-    `}
+&.sidebarItem {
+  
+  flex-direction: row-reverse;
+
+}
 }
 `
 
 export const WrapItemText = styled.div`
 
 @media screen and (min-width: 768px) {
-  ${({ additionalClass }) =>
-    additionalClass &&
-    `
-    margin-left: 430px;      
-    `}
+  
+   &.sidebarWrapText {
+margin-left: auto;
+   }  
+
+
 }
+ 
+
  
 @media screen and (min-width: 1440px) {
 flex-direction: column;
@@ -106,17 +111,17 @@ line-height: 1.25;
 text-transform: uppercase;
 color: #171820;
 
+&.sidebarSub {
+margin-top: 14px;
+  }  
+
 @media screen and (min-width: 768px) {
  
 font-size: 40px;
 line-height: 1.1;
 }
 @media screen and (min-width: 768px) {
-  ${({ additionalClass }) =>
-    additionalClass &&
-    `
-      margin-top: 14px;
-    `}
+  
 
 }
 
@@ -147,6 +152,16 @@ export const StyledPictureDescr = styled.picture`
 
    @media screen and (min-width: 768px) {
      width: 704px;
+
+     @media screen and (min-width: 768px) {
+  
+  &.sidebarImg {
+margin-left: auto;
+
+
+  }  
+   }
+
    }
 
    @media screen and (min-width: 1440px) {
