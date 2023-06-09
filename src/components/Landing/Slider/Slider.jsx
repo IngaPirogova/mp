@@ -89,7 +89,7 @@ const Slider = () => {
   };
 
   return (
-    <div>
+    <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
     <StyledSlider>
       <SliderTitle>Reviews</SliderTitle>
       <SliderList>
