@@ -89,6 +89,7 @@ const Slider = () => {
   };
 
   return (
+    <div>
     <StyledSlider>
       <SliderTitle>Reviews</SliderTitle>
       <SliderList>
@@ -117,6 +118,7 @@ const Slider = () => {
         </button>
       </SliderArWrap>
     </StyledSlider>
+    </div>
   );
 };
 

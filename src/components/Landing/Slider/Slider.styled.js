@@ -40,11 +40,11 @@ export const SliderList = styled.ul`
 
   @media (min-width: 1440px) {
     flex-direction: row;
-    gap: 124px;
+     gap: 124px; 
     margin-bottom: 32px;
   }
   & > li:not(:last-child) {
-    margin-right: 10px; /* Обновленное значение маргина между слайдами */
+    margin-right: 10px; 
   }
 `;
 
