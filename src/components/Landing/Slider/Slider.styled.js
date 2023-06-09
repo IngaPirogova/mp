@@ -36,11 +36,15 @@ export const SliderList = styled.ul`
   margin-bottom: 8px;
   list-style: none;
   overflow: hidden;
+  
 
   @media (min-width: 1440px) {
     flex-direction: row;
     gap: 124px;
     margin-bottom: 32px;
+  }
+  & > li:not(:last-child) {
+    margin-right: 10px; /* Обновленное значение маргина между слайдами */
   }
 `;
 
@@ -52,7 +56,10 @@ export const SliderItem = styled.li`
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  display: block;
+  /* display: block; */
+  display: ${({ index, currentSlide }) => (index === currentSlide ? 'block' : 'none')};
+  margin-left: auto;
+  margin-right: auto;
   transform: translateX(${({ index, currentSlide }) => (index - currentSlide) * 100}%);
 
   @media (min-width: 768px) {

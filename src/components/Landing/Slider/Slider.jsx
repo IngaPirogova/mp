@@ -46,6 +46,34 @@ const reviews = [
     photo: Olex,
     description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
+
+
+  {
+    name: 'Olena Doe 44',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Alexander Hubbard 44',
+    photo: Olex,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Olena Doe 55',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Olena Doe 66',
+    photo: Olena,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Alexander Hubbard 77',
+    photo: Olex,
+    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+
 ];
 
 
@@ -55,7 +83,7 @@ const Slider = () => {
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? reviews.length - 1 : prevSlide - 1));
   };
-
+  
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % reviews.length);
   };
