@@ -48,6 +48,7 @@ const reviews = [
   },
 ];
 
+
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -60,7 +61,7 @@ const Slider = () => {
   };
 
   return (
-    <StyledSlider>      
+    <StyledSlider>
       <SliderTitle>Reviews</SliderTitle>
       <SliderList>
         {reviews.map((review, index) => (
@@ -68,7 +69,6 @@ const Slider = () => {
             key={index}
             index={index}
             currentSlide={currentSlide}
-            style={{ display: index === currentSlide ? 'block' : 'none' }}
           >
             <SliderHeaderUser>
               <SliderUserPhoto src={review.photo} alt={review.name} />
@@ -81,18 +81,18 @@ const Slider = () => {
         ))}
       </SliderList>
       <SliderArWrap>
-        <LeftArrow width={47} height={6} onClick={handlePrevSlide} />
-        <RightArrow width={47} height={6} onClick={handleNextSlide} />
-      </SliderArWrap>      
+        <button onClick={handlePrevSlide}>
+          <LeftArrow width={47} height={6} />
+        </button>
+        <button onClick={handleNextSlide}>
+          <RightArrow width={47} height={6} />
+        </button>
+      </SliderArWrap>
     </StyledSlider>
   );
 };
 
 export default Slider;
-
-
-
-
 
 
 

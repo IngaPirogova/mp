@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+
 export const SliderTitle = styled.h3`
   margin: 0;
   margin-bottom: 40px;
@@ -51,7 +52,8 @@ export const SliderItem = styled.li`
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  display: ${({ index, currentSlide }) => (index === currentSlide ? 'block' : 'none')};
+  display: block;
+  transform: translateX(${({ index, currentSlide }) => (index - currentSlide) * 100}%);
 
   @media (min-width: 768px) {
     max-width: 580px;
@@ -93,11 +95,6 @@ export const SliderUserTitle = styled.h4`
   padding: 0;
 `;
 
-export const SliderUserRating = styled.div`
-  display: flex;
-  gap: 10px;
-`;
-
 export const SliderUserDescr = styled.p`
   margin: 0;
   padding: 0;
@@ -120,6 +117,6 @@ export const SliderArWrap = styled.div`
   margin-top: 20px;
 
   @media (min-width: 768px) {
-  
+
   }
 `;
