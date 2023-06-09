@@ -10,7 +10,7 @@ export const SliderTitle = styled.h3`
   font-size: 28px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: #3e85f3;
+  color: #3E85F3;
 
   @media screen and (min-width: 768px) {
     font-size: 40px;
@@ -19,24 +19,22 @@ export const SliderTitle = styled.h3`
 `;
 
 export const StyledSlider = styled.section`
-  /* height: 100vh;  */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   margin-bottom: 64px;
 `;
 
 export const SliderList = styled.ul`
   display: flex;
   flex-direction: row;
-  gap: 10px;
   padding: 0;
   margin: 0;
   margin-bottom: 8px;
   list-style: none;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (min-width: 1440px) {
     flex-direction: row;
@@ -53,13 +51,15 @@ export const SliderItem = styled.li`
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  width: 100%;
-
-  flex: 0 0 100%;
+  display: ${({ index, currentSlide }) => (index === currentSlide ? 'block' : 'none')};
 
   @media (min-width: 768px) {
     max-width: 580px;
     height: 187px;
+  }
+
+  @media (min-width: 1440px) {
+    display: block;
   }
 `;
 
@@ -120,17 +120,6 @@ export const SliderArWrap = styled.div`
   margin-top: 20px;
 
   @media (min-width: 768px) {
+  
   }
 `;
-
-// export const SliderArrows = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
-
-// export const ArrowButton = styled.button`
-//   background: none;
-//   border: none;
-//   cursor: pointer;
-// `;
