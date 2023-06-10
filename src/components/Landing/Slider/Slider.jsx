@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {  
   SliderTitle, 
   StyledSlider,
@@ -87,6 +87,15 @@ const Slider = () => {
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % reviews.length);
   };
+
+  useEffect(() => {
+    const interval = setInterval(handleNextSlide, 5000); // Смена слайда каждые 5 секунд (5000 миллисекунд)
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []); // Пустой массив зависимостей, чтобы эффект выполнился только один раз при монтировании компонента
+
 
   return (
     <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
