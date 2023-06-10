@@ -68,6 +68,10 @@ export const SliderItem = styled.li`
   }
 
   @media (min-width: 1440px) {
+    @media (min-width: 1440px) {
+    display: ${({ index, currentSlide }) =>
+      index === currentSlide ? 'block' : 'none'};
+  }
     display: block;
   }
 `;
