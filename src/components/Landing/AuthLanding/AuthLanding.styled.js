@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 
 export const StyledHeader = styled.section`
-  height: 100vh;
+  min-height: 100vh; /* вместо 100vh */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +17,8 @@ export const StyledHeader = styled.section`
     padding-top: 0px;
   }
 `;
+
+
 
 export const StyledTitle = styled.h1`
   margin: 0;
@@ -115,3 +118,18 @@ export const StyledLink = styled(NavLink)`
       line-height: 1.29;  
   }
 `;
+
+export const ScrollDownArrow = styled.div`
+  position: absolute;
+  bottom: 16px;
+  font-size: 32px;
+  color: #ffffff;
+  animation: bounce 2s infinite;
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+`;
+
+

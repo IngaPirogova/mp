@@ -38,86 +38,98 @@ import {  StyledText,
 
 const Description = () => {
     return (
-        <StyledList>
-  <StyledItem>
-    <WrapItemText>
-    <StyledNumberTitle>1.</StyledNumberTitle>
-    <StyledBtnDescr>Calendar </StyledBtnDescr>
-    <StyledSubtitle>view</StyledSubtitle>
-    <StyledText>GooseTrack's Calendar view provides a comprehensive overview of your schedule, displaying all your tasks, events, and appointments in a visually appealing and intuitive layout.</StyledText>
-    </WrapItemText>
-    <StyledPictureDescr>
-        <source
-          media="(min-width: 375px)"
-          srcSet={`${calendar1x} 1x, ${calendar2x} 2x`}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet={`${calendartablet1x} 1x, ${calendartablet2x} 2x`}
-        />
-        <source
-          media="(min-width: 1440px)"
-          srcSet={`${calendardesk1x} 1x, ${calendardesk2x} 2x`}
-        />     
-       <StyledImg>
-       <img src={calendar2x} alt="Calendar" />
-       </StyledImg>
-        </StyledPictureDescr>  
-  </StyledItem>
+      <StyledList>
+        <StyledItem>
+          <WrapItemText>
+            <StyledNumberTitle>1.</StyledNumberTitle>
+            <StyledBtnDescr>Calendar </StyledBtnDescr>
+            <StyledSubtitle>view</StyledSubtitle>
+            <StyledText>
+              GooseTrack's Calendar view provides a comprehensive overview of
+              your schedule, displaying all your tasks, events, and appointments
+              in a visually appealing and intuitive layout.
+            </StyledText>
+          </WrapItemText>
+          <StyledPictureDescr>
+            <source
+              media="(min-width: 375px)"
+              srcSet={`${calendar1x} 1x, ${calendar2x} 2x`}
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={`${calendartablet1x} 1x, ${calendartablet2x} 2x`}
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcSet={`${calendardesk1x} 1x, ${calendardesk2x} 2x`}
+            />
+            <StyledImg>
+              <img src={calendar2x} alt="Calendar" />
+            </StyledImg>
+          </StyledPictureDescr>
+        </StyledItem>
 
-  <StyledItem className="sidebarItem">
-  <WrapItemText className="sidebarWrapText" >
-    <StyledNumberTitle>2.</StyledNumberTitle>
-    <StyledSubtitle className='sidebarSub'>sidebar</StyledSubtitle>
-    <StyledText>GooseTrack offers easy access to your account settings, calendar, and filters. The "My Account" section allows you to manage your profile information and preferences, while the calendar provides a quick and convenient way to view your upcoming events and tasks.</StyledText>
-    </WrapItemText>
-    <StyledPictureDescr className="sidebarImg">
-        <source
-          media="(min-width: 375px)"
-          srcSet={`${sidebar1x} 1x, ${sidebar2x} 2x`}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet={`${sidebartablet1x} 1x, ${sidebartablet2x} 2x`}
-        />
-        <source
-          media="(min-width: 1440px)"
-          srcSet={`${sidebardesk1x} 1x, ${sidebardesk2x} 2x`}
-        />     
-       <StyledImg>
-       <img src={sidebar2x} alt="Sidebar"  />
-       </StyledImg>
-        </StyledPictureDescr>  
- 
-  </StyledItem>
-  <StyledItem>
-  <WrapItemText>
-    <StyledNumberTitle>3.</StyledNumberTitle>
-    <StyledBtnDescr>all in</StyledBtnDescr>
-    <StyledSubtitle>one</StyledSubtitle>
-    <StyledText>GooseTrack is an all-in-one productivity tool that helps you stay on top of your tasks, events, and deadlines. Say goodbye to scattered to-do lists and hello to streamlined productivity with GooseTrack.</StyledText>
-    </WrapItemText>
-    <StyledPictureDescr>
-        <source
-          media="(min-width: 375px)"
-          srcSet={`${one1x} 1x, ${one2x} 2x`}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet={`${onetablet1x} 1x, ${onetablet2x} 2x`}
-        />
-        <source
-          media="(min-width: 1440px)"
-          srcSet={`${onedesk1x} 1x, ${onedesk2x} 2x`}
-        />     
-       <StyledImg>
-       <img src={one2x} alt="One" />
-       </StyledImg>
-        </StyledPictureDescr>    
-  </StyledItem>
-</StyledList>
-
-     )
+        <StyledItem className="sidebarItem">
+          <WrapItemText className='right'>
+            <StyledNumberTitle>2.</StyledNumberTitle>
+            <StyledSubtitle className="sidebarSub">sidebar</StyledSubtitle>
+            <StyledText>
+              GooseTrack offers easy access to your account settings, calendar,
+              and filters. The "My Account" section allows you to manage your
+              profile information and preferences, while the calendar provides a
+              quick and convenient way to view your upcoming events and tasks.
+            </StyledText>
+          </WrapItemText>
+          <StyledPictureDescr className="sidebarImg">
+            <source
+              media="(min-width: 375px)"
+              srcSet={`${sidebar1x} 1x, ${sidebar2x} 2x`}
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={`${sidebartablet1x} 1x, ${sidebartablet2x} 2x`}
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcSet={`${sidebardesk1x} 1x, ${sidebardesk2x} 2x`}
+            />
+            <StyledImg>
+              <img src={sidebar2x} alt="Sidebar" />
+            </StyledImg>
+          </StyledPictureDescr>
+        </StyledItem>
+        <StyledItem>
+          <WrapItemText>
+            <StyledNumberTitle>3.</StyledNumberTitle>
+            <StyledBtnDescr>all in</StyledBtnDescr>
+            <StyledSubtitle>one</StyledSubtitle>
+            <StyledText>
+              GooseTrack is an all-in-one productivity tool that helps you stay
+              on top of your tasks, events, and deadlines. Say goodbye to
+              scattered to-do lists and hello to streamlined productivity with
+              GooseTrack.
+            </StyledText>
+          </WrapItemText>
+          <StyledPictureDescr>
+            <source
+              media="(min-width: 375px)"
+              srcSet={`${one1x} 1x, ${one2x} 2x`}
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={`${onetablet1x} 1x, ${onetablet2x} 2x`}
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcSet={`${onedesk1x} 1x, ${onedesk2x} 2x`}
+            />
+            <StyledImg>
+              <img src={one2x} alt="One" />
+            </StyledImg>
+          </StyledPictureDescr>
+        </StyledItem>
+      </StyledList>
+    );
 }    
 
 export default Description;
