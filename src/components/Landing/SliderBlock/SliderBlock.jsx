@@ -1,6 +1,6 @@
-import SliderContainer from '../SliderContainer/SliderContainer';
+import Slider from '../Slider/Slider';
+import { reviews1, reviews2 } from '../Slider/Slider';
 import { SliderTitle } from '../Slider/Slider.styled';
-
 
 const SlidersBlock = () => {
   return (
@@ -14,8 +14,8 @@ const SlidersBlock = () => {
           flexWrap: 'wrap',
         }}
       >
-        <SliderContainer limit={5} />
-        <SliderContainer limit={10} />
+        <Slider data={reviews1} />
+        <Slider data={reviews2} />
       </div>
     </>
   );
