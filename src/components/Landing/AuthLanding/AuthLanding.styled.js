@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export const StyledHeader = styled.section`
-  min-height: 100vh; /* вместо 100vh */
+  min-height: 100vh; 
   position: relative;
   display: flex;
   flex-direction: column;

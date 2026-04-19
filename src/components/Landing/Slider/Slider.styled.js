@@ -71,7 +71,7 @@ export const SliderItem = styled.li`
   
     @media (min-width: 1440px) {
     display: ${({ index, currentSlide }) =>
-      index === currentSlide ? 'block' : 'none'};     
+    index === currentSlide ? 'block' : 'none'};     
   }
 `;
 

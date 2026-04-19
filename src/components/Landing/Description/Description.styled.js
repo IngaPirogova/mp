@@ -9,7 +9,7 @@ export const StyledImg = styled.div`
     display: block;
   }
    `
-  
+
 export const StyledList = styled.ul`
 list-style: none;
 padding: 0px;
@@ -33,8 +33,7 @@ margin-bottom: 64px;
 }
 `;
 
-
-  export const StyledNumberTitle = styled.h2`
+export const StyledNumberTitle = styled.h2`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -49,7 +48,7 @@ margin-bottom: 64px;
      font-size: 104px;
   }
   `
-  export const StyledBtnDescr = styled.button`
+export const StyledBtnDescr = styled.button`
      width:214px;
      height: 56px;
      padding: 8px 18px;
@@ -74,8 +73,8 @@ margin-bottom: 64px;
     line-height: 1.1;  
   }
   `
-  
-  export const StyledSubtitle = styled.h3`
+
+export const StyledSubtitle = styled.h3`
   padding: 0px;
   margin: 0px;
   font-family: 'Inter';
@@ -95,7 +94,7 @@ margin-top: 14px;
      line-height: 1.1;
   }  
   `
-    
+
 export const StyledPictureDescr = styled.picture`
      width: 335px;
      flex-grow: 0;
@@ -107,8 +106,8 @@ export const StyledPictureDescr = styled.picture`
 @media screen and (min-width: 1440px) {
   width: 604px;
 }`
-   
-    
+
+
 export const StyledText = styled.p`
   font-family: 'Inter';
   font-weight: 500;
@@ -124,7 +123,7 @@ export const StyledText = styled.p`
     max-width: 275px;
   }
 `;
-         
+
 export const WrapItemText = styled.div`
   display: flex;
   flex-direction: column;

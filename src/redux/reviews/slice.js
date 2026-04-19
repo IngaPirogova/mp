@@ -28,6 +28,8 @@ export const reviewsSlice = createSlice({
 
   extraReducers: builder => {
     builder
+      
+      // fetch all reviews
       .addCase(fetchReviews.pending, handlePending)
       .addCase(fetchReviews.fulfilled, (state, { payload }) => {
         state.isLoading = false;
@@ -36,6 +38,7 @@ export const reviewsSlice = createSlice({
       })
       .addCase(fetchReviews.rejected, handleRejected)
 
+      // fetch own reviews
       .addCase(fetchOwnReviews.pending, handlePending)
       .addCase(fetchOwnReviews.fulfilled, (state, { payload }) => {
         state.isLoading = false;
@@ -44,34 +47,46 @@ export const reviewsSlice = createSlice({
       })
       .addCase(fetchOwnReviews.rejected, handleRejected)
 
+      // add reviews
       .addCase(addReview.pending, handlePending)
       .addCase(addReview.fulfilled, (state, { payload }) => {
-        state.reviews = payload;
         state.isLoading = false;
         state.error = null;
+
+        // добавляем в массив
+        state.reviews.push(payload);
       })
       .addCase(addReview.rejected, handleRejected)
 
+      // delete reviews (save id)
       .addCase(deleteReview.pending, handlePending)
       .addCase(deleteReview.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
+
+        const deletedId = payload?.id || payload?._id;
+
         state.reviews = state.reviews.filter(
-          review => review.id !== payload.id
+          review => review.id !== deletedId && review._id !== deletedId
         );
       })
       .addCase(deleteReview.rejected, handleRejected)
 
+      // update reviews (save id)
       .addCase(updateReview.pending, handlePending)
       .addCase(updateReview.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
+
+        const updatedId = payload?.id || payload?._id;
+
         state.reviews = state.reviews
-          .filter(review => review.id !== payload.id)
+          .filter(review => review.id !== updatedId && review._id !== updatedId)
           .concat(payload);
       })
       .addCase(updateReview.rejected, handleRejected)
 
+      // logout
       .addCase(logOut.fulfilled, state => {
         state.reviews = [];
         state.ownReviews = [];

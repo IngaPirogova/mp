@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://goosetrack-backend-zk53.onrender.com';
