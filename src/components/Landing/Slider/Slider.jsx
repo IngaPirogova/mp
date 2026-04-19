@@ -77,7 +77,7 @@ const Slider = ({data}) => {
 
      const interval = setInterval(() => {
        setCurrentSlide(prev => (prev + 1) % data.length);
-     }, 3000);
+     }, 2000);
 
      return () => clearInterval(interval);
    }, [data.length]);
