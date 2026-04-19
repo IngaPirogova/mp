@@ -12,6 +12,7 @@ export const SliderTitle = styled.h3`
   line-height: 1.14;
   text-transform: uppercase;
   color: #3E85F3;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 40px;
@@ -67,12 +68,10 @@ export const SliderItem = styled.li`
     height: 187px;
   }
 
-  @media (min-width: 1440px) {
+  
     @media (min-width: 1440px) {
     display: ${({ index, currentSlide }) =>
-      index === currentSlide ? 'block' : 'none'};
-  }
-    display: block;
+      index === currentSlide ? 'block' : 'none'};     
   }
 `;
 

@@ -1,8 +1,5 @@
-
-
 import React, { useState, useEffect } from 'react';
-import {  
-  SliderTitle, 
+import {    
   StyledSlider,
   SliderList,
   SliderItem,
@@ -20,89 +17,78 @@ import { ReactComponent as RightArrow } from '../../../imagesMainPage/svg/righta
 import Olena from '../../../imagesMainPage/img/mobile/Olena2x.png';
 import Olex from '../../../imagesMainPage/img/desktop/Olexdesk2x.png';
 
-const reviews = [
+export const reviews1 = [
   {
-    name: 'Olena Doe 11',
+    name: 'Olena Doe',
     photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
   {
-    name: 'Alexander Hubbard 11',
+    name: 'User 1',
+    photo: Olena,
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+  {
+    name: 'Olena',
+    photo: Olena,
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+  },
+];
+  
+export const reviews2 = [
+  {
+    name: 'Alexander Hubbard',
     photo: Olex,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
   {
-    name: 'Olena Doe 22',
-    photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-  {
-    name: 'Olena Doe 33',
-    photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-  {
-    name: 'Alexander Hubbard 22',
+    name: 'User 2',
     photo: Olex,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-
-
-  {
-    name: 'Olena Doe 44',
-    photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
   {
-    name: 'Alexander Hubbard 44',
+    name: 'Olex',
     photo: Olex,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
+    description:
+      'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
   },
-  {
-    name: 'Olena Doe 55',
-    photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-  {
-    name: 'Olena Doe 66',
-    photo: Olena,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-  {
-    name: 'Alexander Hubbard 77',
-    photo: Olex,
-    description: 'GooseTrack is impressive, the calendar view and filter options make it easy to stay organized and focused. Highly recommended.',
-  },
-
 ];
 
 
-const Slider = () => {
+const Slider = ({data}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handlePrevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? reviews.length - 1 : prevSlide - 1));
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? data.length - 1 : prevSlide - 1));
   };
   
   const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % reviews.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % data.length);
   };
 
-  useEffect(() => {
-    const interval = setInterval(handleNextSlide, 5000); // Смена слайда каждые 5 секунд (5000 миллисекунд)
+   useEffect(() => {
+     // защита от пустого массива
+     if (!data.length) return;
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []); // Пустой массив зависимостей, чтобы эффект выполнился только один раз при монтировании компонента
+     const interval = setInterval(() => {
+       setCurrentSlide(prev => (prev + 1) % data.length);
+     }, 3000);
+
+     return () => clearInterval(interval);
+   }, [data.length]);
 
 
   return (
     <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
     <StyledSlider>
-      <SliderTitle>Reviews</SliderTitle>
+      
       <SliderList>
-        {reviews.map((review, index) => (
+        {data.map((review, index) => (
           <SliderItem
             key={index}
             index={index}
@@ -118,6 +104,7 @@ const Slider = () => {
           </SliderItem>
         ))}
       </SliderList>
+      
       <SliderArWrap>
         <button onClick={handlePrevSlide}>
           <LeftArrow width={47} height={6} />
@@ -137,3 +124,17 @@ export default Slider;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//добавить props data (prewiews -> data)
+//два массива
+//компонент SlidersBlock

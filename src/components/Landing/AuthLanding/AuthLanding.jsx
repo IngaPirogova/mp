@@ -14,7 +14,8 @@ import {
     StyledPicture, 
     StyledImgAuthNav,
   AuthBtnWrapper,   
-     ScrollDownArrow,
+  ScrollDownArrow,
+     Span
   } from './AuthLanding.styled';
   
   import login from '../../../imagesMainPage/svg/login.svg';
@@ -39,7 +40,7 @@ const AuthLanding = () => {
             <img src={goose2x} alt="Logo goose" />
           </StyledImgAuthNav>
         </StyledPicture>
-        <StyledTitle>GooseTrack</StyledTitle>
+        <StyledTitle>G<Span>oo</Span>seTrack</StyledTitle>
         <AuthBtnWrapper>
           <StyledAuthButton to="login">
             Log in
