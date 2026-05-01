@@ -28,7 +28,7 @@ https://github.com/MikiUA/GooseTrack-frontend
 
 ## Usage
 
-1. Visit the THE THING UPON THEE website [here](https://github.com/MikiUA/GooseTrack-frontend/blob/main/mikiua.github.io/GooseTrack-frontend).
+1. Visit the THE THING UPON THEE website [here](mikiua.github.io/GooseTrack-frontend/).
 2. On the landing page, you can learn more about the app and its features.
 3. To start using the app, register for an account or sign in if you already have one.
 4. Upon signing in, you will be directed to the calendar view where you can add, edit, and manage your tasks.
@@ -57,7 +57,6 @@ We welcome contributions from the community to enhance* **this** warm place* of 
 <!-- Add any acknowledgements or credits for resources, libraries, or tutorials used -->
 
 ---
-
 
 
 
