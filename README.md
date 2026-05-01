@@ -2,6 +2,11 @@
 
 Welcome to the **GooseTrack by '[Б]андерогуси'**! This application allows you to manage your tasks, keep track of important events, and stay organized. With an intuitive user interface and powerful features, you can easily add, edit, and prioritize tasks, view your to-do list and completed tasks, and customize your calendar experience.
 
+### 💻 Source code: 
+https://github.com/MikiUA/GooseTrack-frontend
+
+
+
 ## Features
 
 - **Calendar View**: Easily navigate through different months and years to see your scheduled events and tasks. GooseTrack's Calendar view provides a comprehensive overview of your schedule, displaying all your tasks, events, and appointments in a visually appealing and intuitive layout.
@@ -53,8 +58,7 @@ We welcome contributions from the community to enhance* **this** warm place* of 
 
 ---
 
-### 💻 Source code: 
-https://github.com/MikiUA/GooseTrack-frontend
+
 
 
 Thank you for choosing the **GooseTrack by us**! We hope it helps you stay organized and boost your productivity. If you have any questions or need assistance, please feel free to reach out to our support team. Happy organizing!
